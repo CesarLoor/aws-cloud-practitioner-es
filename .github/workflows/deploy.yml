@@ -3,6 +3,7 @@ name: Publicar sitio
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 
 permissions:
@@ -11,7 +12,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -23,14 +24,21 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
-      - run: mkdocs build --strict
-      - run: cfn-lint "labs/**/*.yaml"
-      - run: bash -n labs/comunes/*.sh labs/modulo-*/*.sh
-      - uses: actions/upload-pages-artifact@v3
+      - name: Compilar el sitio (falla si hay enlaces o imágenes rotos)
+        run: mkdocs build --strict
+      - name: Validar plantillas de CloudFormation
+        run: cfn-lint "labs/**/*.yaml"
+      - name: Revisar la sintaxis de los scripts
+        run: |
+          for f in labs/*/*.sh; do bash -n "$f"; done
+          python -m py_compile labs/*/*.py
+      - if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
         with:
           path: site
 
   deploy:
+    if: github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     environment:

@@ -25,10 +25,10 @@ Todo lo que necesitas para practicar en AWS sin sorpresas: crear la cuenta, cono
 | Laboratorio | Módulo | Servicios | Costo estimado |
 | --- | --- | --- | --- |
 | [Laboratorio 1 · Explora la infraestructura global y tu parte de la seguridad](../modulo-01/laboratorio.md) | 1 · Introducción a la nube | Consola, CloudShell, IAM | 0 USD |
-| Laboratorio 2 · Servidor web en EC2 y mensajería con SQS y SNS | 2 · Cómputo en la nube | EC2, AMI, SQS, SNS | Capa gratuita o créditos |
-| Laboratorio 3 · Función Lambda con desencadenador de S3 (+ Elastic Beanstalk) | 3 · Servicios de cómputo | Lambda, S3, Elastic Beanstalk | Capa gratuita o créditos |
-| Laboratorio 4 · Infraestructura como código con CloudFormation | 4 · Hacia la globalización | CloudFormation, S3 | 0 USD |
-| Laboratorio 5 · VPC con subred pública y privada | 5 · Redes | VPC, EC2, grupos de seguridad, ACL de red | Capa gratuita o créditos |
+| [Laboratorio 2 · Servidor web en EC2 y mensajería con SQS y SNS](../modulo-02/laboratorio.md) | 2 · Cómputo en la nube | EC2, AMI, SQS, SNS | Capa gratuita o créditos |
+| [Laboratorio 3 · Función Lambda con desencadenador de S3 (+ Elastic Beanstalk)](../modulo-03/laboratorio.md) | 3 · Servicios de cómputo | Lambda, S3, Elastic Beanstalk | Capa gratuita o créditos |
+| [Laboratorio 4 · Infraestructura como código con CloudFormation](../modulo-04/laboratorio.md) | 4 · Hacia la globalización | CloudFormation, S3 | 0 USD |
+| [Laboratorio 5 · VPC con subred pública y privada, grupos de seguridad y ACL de red](../modulo-05/laboratorio.md) | 5 · Redes | VPC, EC2, grupos de seguridad, ACL de red | Capa gratuita o créditos |
 | Laboratorios 6 a 13 | 6 a 13 | Se publican junto con cada módulo | — |
 
 ## Scripts y plantillas

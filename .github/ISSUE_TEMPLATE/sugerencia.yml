@@ -1,0 +1,28 @@
+name: Proponer una mejora
+description: Capturas, diagramas, ejemplos, preguntas, laboratorios o temas nuevos
+labels: ["mejora"]
+body:
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Tipo de aporte
+      options:
+        - Capturas de la consola
+        - Diagrama
+        - Ejemplo o caso de uso
+        - Preguntas de práctica
+        - Laboratorio
+        - Otro
+    validations:
+      required: true
+  - type: input
+    id: pagina
+    attributes:
+      label: Página o módulo
+      placeholder: Módulo 3 · Laboratorio 3
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Describe tu propuesta
+    validations:
+      required: true

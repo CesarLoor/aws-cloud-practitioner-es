@@ -8,10 +8,14 @@ Guía de estudio abierta para la certificación **AWS Certified Cloud Practition
 
 | Sección | Estado |
 | --- | --- |
-| Entorno de práctica: cuenta, consola, configuración base, limpieza y documentación | ✅ |
+| Sílabo del curso y entorno de práctica (cuenta, consola, configuración base, limpieza y documentación) | ✅ |
 | Módulo 1 · Introducción a la nube (4 lecciones + laboratorio + evaluación) | ✅ |
-| Módulos 2 a 5 | 🔜 Próximamente |
-| Módulos 6 a 13 | ⏳ Pendiente |
+| Módulo 2 · Cómputo en la nube (8 lecciones + laboratorio + evaluación) | ✅ |
+| Módulo 3 · Servicios de cómputo (4 lecciones + laboratorio + evaluación) | ✅ |
+| Módulo 4 · Hacia la globalización (3 lecciones + laboratorio + evaluación) | ✅ |
+| Módulo 5 · Redes (lecciones 1 a 5 + laboratorio + evaluación) | 🚧 |
+| Repaso rápido, simulacro de 25 preguntas y glosario | ✅ |
+| Módulos 6 a 13 | ⏳ Próximamente |
 
 ## Estructura del repositorio
 
@@ -21,18 +25,13 @@ labs/        Scripts y plantillas de CloudFormation de los laboratorios
 mkdocs.yml   Configuración del sitio (MkDocs Material)
 ```
 
-## Ver el sitio en tu computadora
+## En mejora continua
 
-```bash
-pip install -r requirements.txt
-mkdocs serve
-```
-
-Abre http://127.0.0.1:8000. Cada cambio en `docs/` se recarga solo.
+La guía sigue creciendo: estamos agregando **capturas propias de la consola** y **apartados más visuales** (diagramas, pasos ilustrados) para que las lecciones y los laboratorios se entiendan mejor. Los módulos 6 a 13 se publican a medida que avanza el curso.
 
 ## Contribuir
 
-Las correcciones, aclaraciones y casos de uso nuevos son bienvenidos: abre un *issue* o un *pull request*. Antes de enviar cambios, comprueba que `mkdocs build --strict` termina sin errores.
+Las correcciones, aclaraciones, capturas y casos de uso nuevos son bienvenidos. No necesitas instalar nada: usa el botón de editar (lápiz) de cada página del sitio o abre un *issue*. Lee la [guía para contribuir](CONTRIBUTING.md) antes de enviar tu primer cambio.
 
 ## Licencia y avisos
 

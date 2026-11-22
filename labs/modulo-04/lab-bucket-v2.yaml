@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Laboratorio CLF-C02 - bucket S3 creado con CloudFormation (version 2, con etiqueta)
+Resources:
+  BucketLab:
+    Type: AWS::S3::Bucket
+    Properties:
+      VersioningConfiguration:
+        Status: Enabled
+      Tags:
+        - Key: Curso
+          Value: CLF-C02
+Outputs:
+  NombreDelBucket:
+    Value: !Ref BucketLab

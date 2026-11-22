@@ -5,12 +5,27 @@ Guía de estudio abierta y gratuita para preparar la certificación **AWS Certif
 !!! warning "Proyecto comunitario"
     Este material no es oficial ni está afiliado a Amazon Web Services. Úsalo junto con el curso gratuito de [AWS Skill Builder](https://skillbuilder.aws/) y la [documentación oficial](https://docs.aws.amazon.com/). Las condiciones de la capa gratuita y los precios cambian: confírmalos siempre en las páginas de AWS.
 
+!!! info "En mejora continua"
+    Estamos agregando **capturas propias de la consola** y **apartados más visuales** para que las guías y los laboratorios se entiendan mejor, y publicamos los módulos 6 a 13 a medida que avanza el curso. Si quieres ayudar, lee la [guía para contribuir](https://github.com/CesarLoor/aws-cloud-practitioner-es/blob/main/CONTRIBUTING.md).
+
 ## Empieza aquí
 
-1. **Prepara tu cuenta** con el [Entorno de práctica](entorno/index.md): crear la cuenta, recorrer la consola y dejarla segura y con alertas de costo.
-2. **Estudia módulo por módulo** desde la página de [Módulos](modulos.md).
-3. **Haz el laboratorio** de cada módulo y ejecuta sus scripts de verificación.
-4. **Responde la evaluación** sin mirar las respuestas y repasa las trampas típicas del examen.
+1. **Lee el [sílabo](silabo.md)**: objetivos, contenidos, metodología y un cronograma de 8 semanas.
+2. **Prepara tu cuenta** con el [Entorno de práctica](entorno/index.md): crear la cuenta, recorrer la consola y dejarla segura y con alertas de costo.
+3. **Estudia módulo por módulo** desde la página de [Módulos](modulos.md).
+4. **Haz el laboratorio** de cada módulo y ejecuta sus scripts de verificación.
+5. **Ponte a prueba** con la evaluación de cada módulo, el [repaso rápido](repaso/repaso-rapido.md), el [simulacro](repaso/simulacro.md) y el [glosario](repaso/glosario.md).
+
+## Qué tiene cada módulo
+
+| Sección | Para qué |
+| --- | --- |
+| **Lecciones** | Teoría de cada servicio y concepto: qué es, cómo funciona, ejemplos y casos del curso |
+| **Diagramas** | Arquitecturas dibujadas con los iconos oficiales de AWS |
+| **Notas rápidas** | Lo esencial para repasar en 2 minutos |
+| **Laboratorio** | Práctica guiada en tu cuenta, con valores, pasos, script de verificación, errores comunes y limpieza |
+| **Evaluación** | Preguntas de opción múltiple con respuestas explicadas |
+| **Trampas del examen** | Los servicios y conceptos que más se confunden |
 
 ## Cómo estudiar cada módulo
 

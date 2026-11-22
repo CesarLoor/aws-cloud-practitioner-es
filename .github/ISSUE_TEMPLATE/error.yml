@@ -1,0 +1,24 @@
+name: Reportar un error
+description: Algo está mal, desactualizado o no se entiende
+labels: ["error"]
+body:
+  - type: input
+    id: pagina
+    attributes:
+      label: Página
+      description: Enlace o título de la página del sitio
+      placeholder: https://cesarloor.github.io/aws-cloud-practitioner-es/modulo-02/...
+    validations:
+      required: true
+  - type: textarea
+    id: problema
+    attributes:
+      label: ¿Qué está mal?
+      description: Describe el error o lo que no quedó claro
+    validations:
+      required: true
+  - type: textarea
+    id: propuesta
+    attributes:
+      label: ¿Cómo debería decir? (opcional)
+      description: Si conoces la corrección, agrégala con un enlace a la documentación oficial de AWS
