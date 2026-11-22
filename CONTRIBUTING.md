@@ -11,7 +11,7 @@
 | Agregar capturas de la consola | Sigue las reglas de capturas de abajo y súbelas en un *pull request* |
 | Proponer preguntas, casos o laboratorios | Abre un issue de sugerencia o envía el *pull request* directamente |
 
-Cada *pull request* se revisa automáticamente: se compila el sitio en modo estricto (detecta enlaces e imágenes rotos), se valida la plantilla de CloudFormation y se revisa la sintaxis de los scripts. Si algo falla, el mismo *pull request* te dirá qué.
+Nadie puede publicar directamente en la rama principal: todo aporte llega como *pull request* y **solo el mantenedor del proyecto lo aprueba y lo incorpora**. Además, cada *pull request* se revisa automáticamente: se compila el sitio en modo estricto (detecta enlaces e imágenes rotos), se valida la plantilla de CloudFormation y se revisa la sintaxis de los scripts. Si algo falla, el mismo *pull request* te dirá qué.
 
 ## Reglas de contenido
 
