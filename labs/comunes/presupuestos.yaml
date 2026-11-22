@@ -1,0 +1,65 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >-
+  Entorno de practica AWS CLF-C02. Crea un presupuesto de gasto cero y un
+  presupuesto mensual con alertas por correo. Borra la pila para eliminarlos.
+
+Parameters:
+  Correo:
+    Type: String
+    Description: Correo que recibira las alertas de costo.
+    AllowedPattern: "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$"
+    ConstraintDescription: Debe ser un correo valido.
+  LimiteMensual:
+    Type: Number
+    Default: 5
+    MinValue: 1
+    Description: Limite del presupuesto mensual en USD.
+
+Resources:
+  PresupuestoGastoCero:
+    Type: AWS::Budgets::Budget
+    Properties:
+      Budget:
+        BudgetName: lab-gasto-cero
+        BudgetType: COST
+        TimeUnit: MONTHLY
+        BudgetLimit:
+          Amount: 0.01
+          Unit: USD
+      NotificationsWithSubscribers:
+        - Notification:
+            NotificationType: ACTUAL
+            ComparisonOperator: GREATER_THAN
+            Threshold: 100
+            ThresholdType: PERCENTAGE
+          Subscribers:
+            - SubscriptionType: EMAIL
+              Address: !Ref Correo
+
+  PresupuestoMensual:
+    Type: AWS::Budgets::Budget
+    Properties:
+      Budget:
+        BudgetName: lab-mensual
+        BudgetType: COST
+        TimeUnit: MONTHLY
+        BudgetLimit:
+          Amount: !Ref LimiteMensual
+          Unit: USD
+      NotificationsWithSubscribers:
+        - Notification:
+            NotificationType: ACTUAL
+            ComparisonOperator: GREATER_THAN
+            Threshold: 80
+            ThresholdType: PERCENTAGE
+          Subscribers:
+            - SubscriptionType: EMAIL
+              Address: !Ref Correo
+        - Notification:
+            NotificationType: FORECASTED
+            ComparisonOperator: GREATER_THAN
+            Threshold: 100
+            ThresholdType: PERCENTAGE
+          Subscribers:
+            - SubscriptionType: EMAIL
+              Address: !Ref Correo

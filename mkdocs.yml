@@ -1,0 +1,81 @@
+site_name: AWS Cloud Practitioner en español
+site_description: Guía de estudio abierta para la certificación AWS Certified Cloud Practitioner (CLF-C02), con lecciones, diagramas y laboratorios prácticos.
+site_url: https://cesarloor.github.io/aws-cloud-practitioner-es/
+repo_url: https://github.com/CesarLoor/aws-cloud-practitioner-es
+repo_name: CesarLoor/aws-cloud-practitioner-es
+edit_uri: edit/main/docs/
+copyright: Contenido bajo CC BY-SA 4.0 · Proyecto comunitario, no afiliado a Amazon Web Services
+
+theme:
+  name: material
+  language: es
+  icon:
+    logo: material/cloud-outline
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: orange
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: orange
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a modo claro
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+    - toc.follow
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.snippets:
+      base_path: [!relative $config_dir]
+      check_paths: true
+
+nav:
+  - Inicio: index.md
+  - Entorno de práctica:
+      - entorno/index.md
+      - 1 · Crear tu cuenta: entorno/01-crear-cuenta.md
+      - 2 · Recorrido por la consola: entorno/02-consola.md
+      - 3 · Configuración base: entorno/03-configuracion-base.md
+      - 4 · Limpieza y costos: entorno/04-limpieza.md
+      - 5 · Documentación de apoyo: entorno/05-documentacion.md
+  - Módulos:
+      - modulos.md
+      - Módulo 1 · Introducción a la nube:
+          - modulo-01/index.md
+          - 1.1 Computación en la nube: modulo-01/1-1-computacion-en-la-nube.md
+          - 1.2 Infraestructura global: modulo-01/1-2-infraestructura-global.md
+          - 1.3 Responsabilidad compartida: modulo-01/1-3-responsabilidad-compartida.md
+          - 1.4 La nube en la vida real: modulo-01/1-4-casos-reales.md
+          - Laboratorio 1: modulo-01/laboratorio.md

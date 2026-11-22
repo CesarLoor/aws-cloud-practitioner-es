@@ -1,0 +1,9 @@
+/* Diagramas centrados y con borde suave en ambos temas */
+.md-typeset figure img {
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+.md-typeset figcaption {
+  font-size: 0.75rem;
+  max-width: 100%;
+}
