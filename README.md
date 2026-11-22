@@ -13,8 +13,8 @@ Guía de estudio abierta para la certificación **AWS Certified Cloud Practition
 | Módulo 2 · Cómputo en la nube (8 lecciones + laboratorio + evaluación) | ✅ |
 | Módulo 3 · Servicios de cómputo (4 lecciones + laboratorio + evaluación) | ✅ |
 | Módulo 4 · Hacia la globalización (3 lecciones + laboratorio + evaluación) | ✅ |
-| Módulo 5 · Redes (lecciones 1 a 5 + laboratorio + evaluación) | 🚧 |
-| Repaso rápido, simulacro de 25 preguntas y glosario | ✅ |
+| Módulo 5 · Redes (8 lecciones + laboratorio + evaluación) | ✅ |
+| Repaso rápido, simulacro de 28 preguntas y glosario | ✅ |
 | Módulos 6 a 13 | ⏳ Próximamente |
 
 ## Estructura del repositorio

@@ -10,7 +10,7 @@ Términos del curso en orden alfabético, con el módulo donde se estudian. Los 
 | **Amazon API Gateway** | Servicio para crear, publicar y proteger API; puerta de entrada a tus servicios. | 5 |
 | **Amazon Aurora** | Base de datos relacional compatible con MySQL y PostgreSQL, de alto rendimiento y con 6 copias en 3 AZ. | 7 |
 | **Amazon Bedrock** | Servicio para crear aplicaciones de IA generativa con modelos fundacionales de varios proveedores. | 8 |
-| **Amazon CloudFront** | Red de entrega de contenido (CDN) que usa las ubicaciones periféricas. | 4 |
+| **Amazon CloudFront** | Red de entrega de contenido (CDN) que guarda copias del contenido en las ubicaciones periféricas. | 4, 5 |
 | **Amazon CloudWatch** | Supervisión: métricas, registros, alarmas y paneles. | 2, 10 |
 | **Amazon DynamoDB** | Base de datos NoSQL clave-valor sin servidor, con latencia de milisegundos. | 7 |
 | **Amazon EBS** | Volúmenes de almacenamiento en bloque persistentes para EC2, ubicados en una AZ. | 6 |
@@ -20,6 +20,7 @@ Términos del curso en orden alfabético, con el módulo donde se estudian. Los 
 | **Amazon EventBridge** | Bus de eventos que enruta eventos a destinos según reglas. | 2 |
 | **Amazon RDS** | Bases de datos relacionales administradas (Aurora, MySQL, PostgreSQL, MariaDB, Oracle, SQL Server, Db2). | 7 |
 | **Amazon Redshift** | Almacén de datos para analítica a gran escala. | 7, 8 |
+| **Amazon Route 53** | Servicio de DNS de AWS: traduce nombres a IP, registra dominios, comprueba la salud de los recursos y enruta el tráfico. | 5 |
 | **Amazon S3** | Almacenamiento de objetos ilimitado con durabilidad de 11 nueves. | 1, 6 |
 | **Amazon SageMaker AI** | Plataforma para preparar datos, entrenar, desplegar y monitorear modelos de ML. | 8 |
 | **Amazon SNS** | Servicio de publicación/suscripción: empuja mensajes a todos los suscriptores de un tema. | 2 |
@@ -38,6 +39,7 @@ Términos del curso en orden alfabético, con el módulo donde se estudian. Los 
 | **AWS Direct Connect** | Conexión de red privada y dedicada entre tu centro de datos y AWS, sin pasar por internet. | 5 |
 | **AWS Elastic Beanstalk** | Servicio para desplegar aplicaciones web subiendo el código; crea EC2, ELB y Auto Scaling. | 3 |
 | **AWS Fargate** | Motor de cómputo sin servidor para contenedores de ECS y EKS. | 3 |
+| **AWS Global Accelerator** | Lleva el tráfico de los usuarios por la red global de AWS con dos IP estáticas y conmutación por error rápida; no guarda caché. | 5 |
 | **AWS IAM** | Servicio de identidades y permisos: usuarios, grupos, roles y políticas. | 9 |
 | **AWS KMS** | Servicio para crear y administrar claves de cifrado. | 9 |
 | **AWS Lambda** | Servicio sin servidor que ejecuta código ante eventos, hasta 15 minutos, cobrando por milisegundo. | 3 |
@@ -55,8 +57,10 @@ Términos del curso en orden alfabético, con el módulo donde se estudian. Los 
 | **CIDR** | Notación del rango de direcciones IP de una VPC o subred, por ejemplo `10.0.0.0/16`. | 5 |
 | **Computación en la nube** | Entrega bajo demanda de recursos de TI por internet con pago por uso. | 1 |
 | **Con estado / sin estado** | Con estado recuerda las conexiones y deja pasar la respuesta (grupo de seguridad); sin estado evalúa cada paquete por separado (ACL de red). | 5 |
+| **Conmutación por error (failover)** | Cambio automático a un recurso de respaldo cuando el principal falla, para mantener la disponibilidad. | 5 |
 | **Contenedor** | Paquete con la aplicación y todo lo que necesita para ejecutarse igual en cualquier lugar; comparte el SO del host. | 3 |
 | **Desacoplamiento (acoplamiento débil)** | Diseño en el que los componentes funcionan de forma independiente: si uno falla, los demás siguen. | 2 |
+| **DNS (sistema de nombres de dominio)** | Traduce nombres de dominio legibles por personas en direcciones IP; la guía telefónica de internet. | 5 |
 | **EC2 Auto Scaling** | Agrega o quita instancias automáticamente entre una capacidad mínima y una máxima. | 2 |
 | **Elastic Load Balancing (ELB)** | Distribuye el tráfico entrante entre recursos sanos, como instancias de EC2. | 2 |
 | **Elasticidad** | Ajustar recursos automáticamente y en tiempo real según la demanda. | 2, 4 |

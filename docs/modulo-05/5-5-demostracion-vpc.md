@@ -26,7 +26,15 @@ Una VPC con **subredes públicas y privadas en dos zonas de disponibilidad**, un
 !!! note "Nota rápida"
     Toda tabla de rutas tiene una ruta **local** (el rango de la VPC) que permite que las subredes se comuniquen entre sí. La diferencia entre pública y privada es solo la ruta hacia la IGW.
 
-## 3. Atajo: el asistente "VPC y más"
+## 3. Los componentes de la demostración, en tres pasos
+
+1. **Crear la VPC.** Antes de crear cualquier recurso, creas tu propia VPC y eliges la región mejor ubicada para tus recursos.
+2. **Crear las subredes.** Dos públicas (para las instancias de EC2 que atienden a los usuarios) y dos privadas (para las bases de datos), repartidas en **dos zonas de disponibilidad**: es la práctica recomendada para lograr alta disponibilidad.
+3. **Puerta de enlace de internet y tablas de rutas.** Sin puerta de enlace de internet, los usuarios no pueden llegar a tus recursos. Primero la creas y la adjuntas; luego creas las tablas de rutas para dejar entrar el tráfico de internet a las subredes públicas y mantener el tráfico local entre subredes.
+
+**Y después:** decide qué seguridad necesitas y filtra el tráfico entrante y saliente con **grupos de seguridad** y **ACL de red** ([lección 5.4](5-4-grupos-seguridad-acl.md)). Con eso ya puedes agregar tus recursos, como instancias de EC2 o bases de datos, en sus subredes.
+
+## 4. Atajo: el asistente "VPC y más"
 
 Al crear una VPC puedes elegir **VPC y más**: el asistente crea en un solo paso la VPC, las subredes en varias AZ, la IGW y las tablas de rutas ya asociadas. Es lo que usarás en el [laboratorio de este módulo](laboratorio.md).
 

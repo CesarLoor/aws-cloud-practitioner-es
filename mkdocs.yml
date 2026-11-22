@@ -114,6 +114,9 @@ nav:
           - 5.3 Más formas de conectarse: modulo-05/5-3-conectividad.md
           - 5.4 Grupos de seguridad y ACL: modulo-05/5-4-grupos-seguridad-acl.md
           - 5.5 Demostración de Amazon VPC: modulo-05/5-5-demostracion-vpc.md
+          - 5.6 Redes globales: modulo-05/5-6-redes-globales.md
+          - 5.7 Arquitecturas globales: modulo-05/5-7-arquitecturas-globales.md
+          - 5.8 Resumen y recursos: modulo-05/5-8-resumen.md
           - Laboratorio 5: modulo-05/laboratorio.md
   - Repaso:
       - Repaso rápido: repaso/repaso-rapido.md

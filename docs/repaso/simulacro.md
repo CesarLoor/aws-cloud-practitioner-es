@@ -1,7 +1,7 @@
 # Simulacro de examen · Módulos 1 a 5
 
 !!! abstract "Instrucciones"
-    25 preguntas al estilo del examen CLF-C02 sobre los módulos 1 a 5. Date **35 minutos**, anota tus respuestas y al final abre la sección de respuestas. Meta: **20 aciertos o más (80 %)**. El simulacro crecerá a medida que se publiquen los demás módulos.
+    28 preguntas al estilo del examen CLF-C02 sobre los módulos 1 a 5. Date **40 minutos**, anota tus respuestas y al final abre la sección de respuestas. Meta: **23 aciertos o más (80 %)**. El simulacro crecerá a medida que se publiquen los demás módulos.
 
 **1.** Una startup quiere lanzar su producto sin comprar servidores y pagar solo lo que consuma. ¿Qué ventaja de la nube describe esto?
 
@@ -178,6 +178,27 @@
 - c) Estar en la zona de disponibilidad a
 - d) Tener una ACL de red predeterminada
 
+**26.** Una plataforma de cursos en línea quiere que sus videos carguen rápido para estudiantes de todo el mundo y bajar el costo de transferencia desde su servidor de origen. ¿Qué usa?
+
+- a) Amazon Route 53
+- b) Amazon CloudFront
+- c) AWS Global Accelerator
+- d) AWS Transit Gateway
+
+**27.** ¿Qué servicio traduce nombres de dominio a direcciones IP y permite registrar dominios?
+
+- a) Amazon CloudFront
+- b) Amazon Route 53
+- c) Amazon API Gateway
+- d) AWS Direct Connect
+
+**28.** Una empresa necesita mantener su conexión dedicada con AWS aunque falle una línea. ¿Qué arquitectura es la adecuada?
+
+- a) Una sola conexión de Direct Connect y una instancia más grande
+- b) Dos conexiones de Direct Connect, o Direct Connect con una VPN de respaldo
+- c) Una puerta de enlace de internet
+- d) Un NAT Gateway
+
 ## Respuestas y explicaciones
 
 ??? success "Ver respuestas (después de terminar)"
@@ -206,11 +227,14 @@
     23. **b**: solo las ACL de red tienen reglas de denegar y actúan sobre la subred (M5).
     24. **b**: el NAT Gateway permite salir sin aceptar conexiones entrantes (M5).
     25. **b**: la ruta 0.0.0.0/0 hacia la IGW hace pública a la subred (M5).
+    26. **b**: CloudFront guarda los videos en caché en ubicaciones periféricas (M5).
+    27. **b**: Route 53 es el DNS de AWS y también registra dominios (M5).
+    28. **b**: la redundancia en la conexión permite la conmutación por error (M5).
 
 ## Tu resultado
 
 | Aciertos | Qué hacer |
 | --- | --- |
-| 23 a 25 | Excelente: sigue con el siguiente bloque de módulos |
-| 20 a 22 | Bien: repasa las preguntas que fallaste en su módulo |
-| Menos de 20 | Vuelve a las notas rápidas y a las trampas típicas de cada módulo |
+| 26 a 28 | Excelente: sigue con el siguiente bloque de módulos |
+| 23 a 25 | Bien: repasa las preguntas que fallaste en su módulo |
+| Menos de 23 | Vuelve a las notas rápidas y a las trampas típicas de cada módulo |

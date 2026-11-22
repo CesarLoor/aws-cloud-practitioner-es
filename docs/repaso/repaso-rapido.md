@@ -37,6 +37,8 @@
 - **Client VPN** personas · **Site-to-Site VPN** sedes · **Direct Connect** línea dedicada · **PrivateLink** servicios sin internet.
 - **Transit Gateway** hub · **NAT Gateway** solo salida · **API Gateway** puerta de las API.
 - **Grupo de seguridad:** instancia, con estado, solo permitir · **ACL de red:** subred, sin estado, permitir y denegar.
+- **Route 53** DNS y dominios · **CloudFront** CDN con caché · **Global Accelerator** red de AWS con IP estáticas, sin caché.
+- **Conmutación por error:** dos Direct Connect (o DX + VPN de respaldo) y Route 53 entre regiones.
 
 ## Módulos 6 a 13 en una línea
 
@@ -56,6 +58,8 @@
 | Rendimiento, métricas, alarmas | CloudWatch | CloudTrail (auditoría de la API) |
 | Quién hizo qué y cuándo | CloudTrail | Config (estado de la configuración) |
 | Infraestructura como código | CloudFormation | CloudFront (CDN) |
+| Caché de contenido cerca del usuario | CloudFront | Global Accelerator (acelera el tráfico sin caché) |
+| Registrar o administrar dominios | Route 53 | CloudFront (entrega contenido) |
 | Guardar mensajes hasta procesarlos | SQS | SNS (notificar a muchos) |
 | Firewall de instancia, con estado | Grupo de seguridad | ACL de red (subred, sin estado) |
 | Conexión privada dedicada | Direct Connect | Site-to-Site VPN (por internet, cifrada) |

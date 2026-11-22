@@ -3,10 +3,7 @@
 *Networking* · Dominios del examen: **D3 Tecnología y servicios** y **D2 Seguridad y cumplimiento**
 
 !!! abstract "Resumen del módulo"
-    Una **Amazon VPC** es tu red privada y aislada dentro de AWS. Se divide en **subredes**: las **públicas** tienen una ruta a la **puerta de enlace de internet** y las **privadas** no. Para conectar oficinas y personas usas **VPN** (cifrada por internet: **Client VPN** para personas, **Site-to-Site VPN** para sedes) o **Direct Connect** (línea privada dedicada); para consumir servicios en privado, **PrivateLink**. **Transit Gateway**, **NAT Gateway** y **API Gateway** completan el panorama. La seguridad de red tiene dos capas: **ACL de red** (subred, sin estado) y **grupos de seguridad** (instancia, con estado), y configurarlas es responsabilidad del cliente.
-
-!!! info "Módulo en desarrollo"
-    Están publicadas las lecciones 5.1 a 5.5 del curso. Las lecciones 6 a 9 del módulo se agregarán pronto.
+    Una **Amazon VPC** es tu red privada y aislada dentro de AWS. Se divide en **subredes**: las **públicas** tienen una ruta a la **puerta de enlace de internet** y las **privadas** no. Para conectar oficinas y personas usas **VPN** (cifrada por internet: **Client VPN** para personas, **Site-to-Site VPN** para sedes) o **Direct Connect** (línea privada dedicada); para consumir servicios en privado, **PrivateLink**. **Transit Gateway**, **NAT Gateway** y **API Gateway** completan el panorama. La seguridad de red tiene dos capas: **ACL de red** (subred, sin estado) y **grupos de seguridad** (instancia, con estado), y configurarlas es responsabilidad del cliente. En la periferia, **Route 53** traduce nombres de dominio (DNS), **CloudFront** entrega contenido en caché cerca del usuario y **Global Accelerator** lleva el tráfico por la red global de AWS. Con dos conexiones de **Direct Connect** (o una VPN de respaldo) y **varias regiones** se construyen arquitecturas globales con **conmutación por error**.
 
 ## Resultados de aprendizaje
 
@@ -17,6 +14,8 @@
 5. Explicar Transit Gateway, NAT Gateway y API Gateway.
 6. Diferenciar grupos de seguridad (con estado) y ACL de red (sin estado), y quién es responsable de configurarlos.
 7. Crear una VPC con subredes, IGW y tablas de rutas.
+8. Explicar el DNS y elegir entre Route 53, CloudFront y Global Accelerator.
+9. Diseñar arquitecturas globales: VPN o Direct Connect con conmutación por error y entrega de contenido en varias regiones.
 
 ## Mapa del módulo
 
@@ -34,6 +33,9 @@
 | [5.3](5-3-conectividad.md) | Más formas de conectarse a la nube de AWS |
 | [5.4](5-4-grupos-seguridad-acl.md) | Subredes, grupos de seguridad y ACL de red |
 | [5.5](5-5-demostracion-vpc.md) | Demostración de Amazon VPC |
+| [5.6](5-6-redes-globales.md) | Redes globales: DNS, Route 53, CloudFront y Global Accelerator |
+| [5.7](5-7-arquitecturas-globales.md) | Arquitecturas globales: VPN, Direct Connect y varias regiones |
+| [5.8](5-8-resumen.md) | Resumen del módulo y recursos |
 | [Laboratorio 5](laboratorio.md) | VPC con subred pública y privada, grupos de seguridad y ACL de red |
 
 ## Servicios y conceptos del módulo
@@ -52,6 +54,11 @@
 | **ACL de red** | Firewall de subred | Sin estado; permitir y denegar; orden numérico | Control de pasaportes | 5.4 |
 | **Grupo de seguridad** | Firewall de instancia | Con estado; solo permitir | El portero del edificio | 5.4 |
 | **Tablas de rutas** | Deciden a dónde va el tráfico | Ruta local + ruta a la IGW en las públicas | Demostración de VPC | 5.5 |
+| **DNS** | La guía telefónica de internet | Traduce nombres de dominio a direcciones IP | `www.empresax.com` → `192.0.2.0` | 5.6 |
+| **Amazon Route 53** | DNS de AWS | Resuelve nombres, registra dominios, comprueba la salud y enruta | Empresa de medios que centraliza sus dominios | 5.6 |
+| **Amazon CloudFront** | Red de entrega de contenido (CDN) | Guarda copias en ubicaciones periféricas | Streaming de video, tienda en línea, app de viajes | 5.6 |
+| **AWS Global Accelerator** | Acelerador de red | 2 IP estáticas; el tráfico viaja por la red de AWS; sin caché | Videojuego global, app bancaria | 5.6 |
+| **Conmutación por error** | Pasar solo a un componente de respaldo | Comprobaciones de estado detectan la falla | Dos Direct Connect; Route 53 entre regiones | 5.7 |
 
 ## Notas rápidas
 
@@ -63,6 +70,8 @@
     - **Grupo de seguridad** = instancia · con estado · solo permitir · niega toda entrada y permite toda salida por defecto.
     - **ACL de red** = subred · sin estado · permitir y denegar · orden numérico · la predeterminada permite todo; una personalizada nueva niega todo.
     - Configurar grupos de seguridad y ACL es responsabilidad **del cliente**.
+    - **DNS** = nombre → IP · **Route 53** = DNS + registro de dominios + comprobaciones de estado · **CloudFront** = CDN con caché · **Global Accelerator** = red de AWS + IP estáticas, sin caché.
+    - **VPN** = rápida y cifrada por internet · **Direct Connect** = dedicada y estable · dos líneas (o DX + VPN) = **conmutación por error**.
 
 ## Evaluación del módulo
 
@@ -136,6 +145,41 @@
 - c) AWS Client VPN
 - d) Amazon Route 53
 
+**11. Una empresa de medios quiere registrar dominios nuevos y administrar en un solo servicio los que tiene en varios registradores. ¿Qué usa?**
+
+- a) Amazon CloudFront
+- b) Amazon Route 53
+- c) AWS Global Accelerator
+- d) Amazon VPC
+
+**12. ¿Qué servicio guarda en caché videos e imágenes en ubicaciones periféricas cerca de los usuarios?**
+
+- a) AWS Global Accelerator
+- b) Amazon Route 53
+- c) Amazon CloudFront
+- d) AWS Direct Connect
+
+**13. Un juego en línea necesita dos IP estáticas y que su tráfico TCP/UDP viaje por la red de AWS con conmutación por error rápida entre regiones. ¿Qué usa?**
+
+- a) Amazon CloudFront
+- b) AWS Global Accelerator
+- c) Amazon Route 53
+- d) NAT Gateway
+
+**14. Una empresa usa una sola conexión de Direct Connect y quiere seguir conectada a AWS si esa línea falla. ¿Qué le recomiendas?**
+
+- a) Una instancia de EC2 más grande
+- b) Una segunda conexión de Direct Connect o una Site-to-Site VPN de respaldo
+- c) Una puerta de enlace de internet
+- d) Más ubicaciones periféricas
+
+**15. ¿Qué hace el DNS?**
+
+- a) Cifra el tráfico entre dos redes
+- b) Traduce nombres de dominio a direcciones IP
+- c) Guarda contenido en caché
+- d) Asigna direcciones IP privadas a las instancias
+
 ??? success "Ver respuestas y explicaciones"
     1. **b**: la IGW conecta la VPC con internet.
     2. **b**: los datos sensibles van en subredes privadas.
@@ -147,6 +191,11 @@
     8. **b**: los grupos de seguridad solo permiten; las ACL también pueden denegar.
     9. **b**: configurar la red es seguridad EN la nube.
     10. **a**: Transit Gateway funciona como hub central.
+    11. **b**: Route 53 registra y transfiere dominios para administrarlos en un solo lugar.
+    12. **c**: CloudFront es la CDN de AWS; Global Accelerator no guarda caché.
+    13. **b**: Global Accelerator da IP estáticas y conmutación por error rápida por la red de AWS.
+    14. **b**: la redundancia en la conexión permite la conmutación por error.
+    15. **b**: el DNS es la guía telefónica de internet.
 
 ## Trampas típicas del examen
 
@@ -156,7 +205,11 @@
     - **Client VPN** (personas) ≠ **Site-to-Site VPN** (redes completas).
     - **IGW** (entrada y salida pública) ≠ **NAT Gateway** (solo salida desde privadas) ≠ **puerta de enlace privada virtual** (extremo de la VPN).
     - Una subred pertenece a **una sola AZ**; la VPC abarca todas las AZ de su región.
+    - **CloudFront** (CDN, guarda caché) ≠ **Global Accelerator** (acelera el tráfico por la red de AWS, sin caché, IP estáticas).
+    - **Route 53** no entrega contenido: resuelve nombres y enruta. Si la pregunta dice "dominios" o "DNS", es Route 53.
+    - **Direct Connect** no cifra por defecto; para cifrar se combina con una VPN.
 
 ## Recursos
 
 - [Amazon VPC](https://aws.amazon.com/vpc/) · [Grupos de seguridad](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html) · [ACL de red](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html)
+- [Amazon Route 53](https://aws.amazon.com/route53/) · [Amazon CloudFront](https://aws.amazon.com/cloudfront/) · [AWS Global Accelerator](https://aws.amazon.com/global-accelerator/)

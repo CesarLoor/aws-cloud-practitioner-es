@@ -8,7 +8,7 @@ El curso *AWS Cloud Practitioner Essentials* tiene 13 módulos. Cada módulo pub
 | 2 | [Cómputo en la nube](modulo-02/index.md) *(Compute in the Cloud)* | D3, D4 | ✅ Publicado |
 | 3 | [Exploración de los servicios de cómputo](modulo-03/index.md) *(Exploring Compute Services)* | D3 | ✅ Publicado |
 | 4 | [Hacia la globalización](modulo-04/index.md) *(Going Global)* | D1, D3 | ✅ Publicado |
-| 5 | [Redes](modulo-05/index.md) *(Networking)* | D2, D3 | 🚧 Lecciones 1 a 5 publicadas |
+| 5 | [Redes](modulo-05/index.md) *(Networking)* | D2, D3 | ✅ Publicado |
 | 6 | Almacenamiento *(Storage)* | D3 | ⏳ Próximamente |
 | 7 | Bases de datos *(Databases)* | D3 | ⏳ Próximamente |
 | 8 | IA/ML y análisis de datos *(AI/ML and Data Analytics)* | D3 | ⏳ Próximamente |
@@ -18,6 +18,6 @@ El curso *AWS Cloud Practitioner Essentials* tiene 13 módulos. Cada módulo pub
 | 12 | Migración a la nube de AWS *(Migrating to the AWS Cloud)* | D1, D3 | ⏳ Próximamente |
 | 13 | Soluciones bien diseñadas *(Well-Architected Solutions)* | D1 | ⏳ Próximamente |
 
-Para repasar todo lo publicado: [repaso rápido](repaso/repaso-rapido.md), [simulacro de 25 preguntas](repaso/simulacro.md) y [glosario](repaso/glosario.md).
+Para repasar todo lo publicado: [repaso rápido](repaso/repaso-rapido.md), [simulacro de 28 preguntas](repaso/simulacro.md) y [glosario](repaso/glosario.md).
 
 Temario oficial: [anuncio del curso actualizado](https://aws.amazon.com/blogs/training-and-certification/new-aws-cloud-practitioner-essentials).
